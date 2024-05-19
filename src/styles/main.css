@@ -1,0 +1,93 @@
+@import './md.css';
+
+
+html.dark {
+	background: #100c2a !important;
+}
+
+.prose {
+	scroll-behavior: smooth;
+}
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	@apply bg-blue-700 bg-opacity-75;
+
+	background: repeating-linear-gradient(90deg, #00dc82 0, #34cdfe 50%, #0047e1);
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 2px;
+}
+
+/*
+* 全局滚动条
+*/
+::-webkit-scrollbar {
+	width: 8px;
+	height: 11px;
+	background-color: rgb(246, 247, 248);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(233, 236, 239);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(246, 247, 248);
+	border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar,
+html.dark ::-webkit-scrollbar-track {
+	background-color: #212529;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+	background-color: #343a40;
+}
+
+.text-overflow {
+  display: inline-block; /* or block, depending on your layout */
+  max-width: 200px; /* Adjust the width as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.custom-scroll {
+  overflow-x: hidden; /* 隐藏横向滚动条 */
+  overflow-y: auto; /* 使竖向滚动条自动出现 */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: darkgray transparent; /* Firefox */
+}
+
+/* 对于 Webkit 浏览器 (例如 Chrome, Safari) */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px; /* 竖向滚动条宽度 */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: darkgray; /* 竖向滚动条颜色 */
+  border-radius: 10px; /* 圆角 */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* 滚动条轨道颜色 */
+}
+
+.el-dialog{
+	background: #212529;
+}
+
+html{
+	font-family: "__protoMono_8f484c","__protoMono_Fallback_8f484c";
+}
