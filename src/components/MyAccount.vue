@@ -1,17 +1,17 @@
 <template>
-	<header class=" h-40 text-white p-4 flex justify-between items-center">
+	<header class="h-40 text-white p-4 flex justify-between items-center">
 		<!-- Logo -->
 		<div class="flex items-center">
 			<img :src="avatar" alt="avatar" class="w-20 h-20 rounded-full mr-3" />
 			<div>
-								<div class="text-overflow">
-									{{ formatAddress(address) }}
-								</div>
-								<div><span class="profit text-2xl">$+316.5k</span></div>
-							</div>
+				<div class="text-overflow">
+					{{ formatAddress(address) }}
+				</div>
+				<div><span class="profit text-2xl">$+316.5k</span></div>
+			</div>
 		</div>
 
-		<div class="relative" >
+		<div class="relative">
 			<div class="flex items-center space-x-4">
 				<div class="flex flex-col items-end">
 					<div class="text-sm">Daily Tips Balance： <span>100 / 200</span></div>
@@ -26,7 +26,7 @@
 						Clain onchains Tips reward
 					</button>
 					<button
-						class="mt-2 text-base bg-#D4D8DA text-#000 rounded px-6 py-4  flex justify-between items-center cursor-pointer shadow-md"
+						class="mt-2 text-base bg-#D4D8DA text-#000 rounded px-6 py-4 flex justify-between items-center cursor-pointer shadow-md"
 						@click="handleOpen"
 						v-else
 					>
@@ -47,14 +47,14 @@
 import { ref } from 'vue'
 
 import avatar from '/avatar.jpg'
-import { formatAddress } from '~/utils';
+import { formatAddress } from '~/utils'
 
 defineProps({
 	role: String,
 	address: {
-		type:String,
-		default:''
-	}
+		type: String,
+		default: '',
+	},
 })
 
 // 声明一个 ref 变量来保存钱包地址和下拉框的显示状态

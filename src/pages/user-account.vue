@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col w-full">
-		<Header></Header>
-		<div class="container">
+		<!-- <Header></Header> -->
+		<div class="account-container  w-full">
 			<div class="px-10">
 				<MyAccount :role="role" :address="address"></MyAccount>
 			</div>
@@ -91,35 +91,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import data from '/data.png'
-
-// 示例列表数据
-const listData = ref(['Item 1', 'Item 2', 'Item 3', 'Item 4'])
-
-// 示例表格数据
-const tableData = ref([
-	{
-		date: '2024-05-01',
-		name: 'Tom',
-		address: 'No. 189, Grove St, Los Angeles',
-	},
-	{
-		date: '2024-05-02',
-		name: 'Jerry',
-		address: 'No. 189, Grove St, Los Angeles',
-	},
-	{
-		date: '2024-05-03',
-		name: 'Jack',
-		address: 'No. 189, Grove St, Los Angeles',
-	},
-	{
-		date: '2024-05-04',
-		name: 'Rose',
-		address: 'No. 189, Grove St, Los Angeles',
-	},
-])
+import data from '/data.png';
 
 const route = useRoute()
 
@@ -131,10 +103,11 @@ const address = route.query.walletAddress ?? ''
 </script>
 
 <style scoped lang="scss">
-.container {
+.account-container {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	width: 100vw;
 }
 
 .top-section {
