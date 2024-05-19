@@ -21,7 +21,7 @@
 								<div><span class="profit">$+116.5k</span></div>
 							</div>
 						</div>
-						<el-button size="small">Track</el-button>
+						<el-button size="small" >Track</el-button>
 					</div>
 
 					<!-- 文本内容区 -->
@@ -189,9 +189,4 @@ section {
 	margin-bottom: 20px;
 }
 
-.profit {
-	color: #83ce8e;
-	font-size: 16px;
-	font-weight: bold;
-}
 </style>

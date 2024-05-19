@@ -2,9 +2,9 @@
 	<div class="my-dialog">
 		<el-dialog
 			v-model="curVisible"
-			:show-close="false"
 			title="Tips"
 			width="500"
+			@close="handleClose"
 		>
 			<div class="text-center text-#fff">
 				<div class="text-#ABABAA">tip for this Insight</div>
@@ -62,9 +62,9 @@ const amount = ref(null)
 const remain = ref(200)
 const counter = createCounter()
 const handleConfirm = () => {
-	curVisible.value = false
+	handleClose()
 	if(amount.value){
-		remain.value = 200 - amount.value
+		remain.value = remain.value - amount.value
 		counter.updateBalance(remain.value)
 	}
 }

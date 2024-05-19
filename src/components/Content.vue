@@ -22,9 +22,12 @@
 							<img
 								:src="avatar"
 								alt="avatar"
-								class="w-10 h-10 rounded-full"
+								class="w-16 h-16 rounded-full"
 							/>
-							<div class="text-overflow">0x78172f781095206899cd44d38c4f99bb846fe3d5</div>
+							<div class="text-overflow">
+								{{ formatAddress('0x78172f781095206899cd44d38c4f99bb846fe3d5') }}
+								<div><span class="profit">$+186.5k</span></div>
+								</div>
 						</div>
 				<div class="tip1">
 					<h1 class="my-4 text-2xl font-700">Weekly Trading Review and Summary</h1>
@@ -90,6 +93,20 @@
 					<img :src="data0" alt="" />
 				</div>
 				<div class="tip1 mt-10">
+					<div
+							class="flex items-center space-x-4 cursor-pointer"
+							@click="handleToUserAccount('0xdac17f958d2ee523a2206206994597c13d831ec7')"
+						>
+							<img
+								:src="avatar"
+								alt="avatar"
+								class="w-16 h-16 rounded-full"
+							/>
+							<div class="text-overflow">
+								{{ formatAddress('0xdac17f958d2ee523a2206206994597c13d831ec7') }}
+								<div><span class="profit">$+126.5k</span></div>
+								</div>
+						</div>
 					<h1 class=" my-4 text-2xl font-700">Antimacy’s Q2 Portfolio Performance Update</h1>
 
 					<h2><strong>Portfolio Update: #CryptoPortfolio</strong></h2>
@@ -204,6 +221,7 @@
 import data0 from '/data0.png'
 import data from '/data.png'
 import avatar from '/avatar.jpg'
+import {formatAddress} from '@/utils'
 
 const tokens = [
 	{

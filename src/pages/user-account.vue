@@ -3,7 +3,7 @@
 		<Header></Header>
 		<div class="container">
 			<div class="px-10">
-				<MyAccount :role="role"></MyAccount>
+				<MyAccount :role="role" :address="address"></MyAccount>
 			</div>
 			<!-- 上半部分 -->
 			<div class="top-section">
@@ -124,6 +124,8 @@ const tableData = ref([
 const route = useRoute()
 
 const role = route.query.role ?? ''
+
+const address = route.query.walletAddress ?? ''
 
 
 </script>

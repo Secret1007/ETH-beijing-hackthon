@@ -7,8 +7,12 @@
 
 		<div class="relative" >
 			<div class="flex items-center space-x-4">
-				<!-- <div class="flex flex-col items-end">
+				<div class="flex flex-col items-end">
 					<div class="text-sm">Daily Tips Balance： <span>{{ counter.remainBalance }} / 200</span></div>
+					<div class="text-sm">Tips Received： <span>1,000</span></div>
+				</div>
+				<!-- <div class="flex flex-col items-end">
+					<div class="text-sm">Daily Tips Balance： <span>100 / 200</span></div>
 					<div class="text-sm">Tips Received： <span>1,000</span></div>
 				</div> -->
 				<div class="relative account-wrapper" >

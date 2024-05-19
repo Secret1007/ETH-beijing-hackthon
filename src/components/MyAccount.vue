@@ -2,10 +2,13 @@
 	<header class=" h-40 text-white p-4 flex justify-between items-center">
 		<!-- Logo -->
 		<div class="flex items-center">
-			<img :src="avatar" alt="avatar" class="w-16 h-16 rounded-full mr-3" />
-			<span class="text-overflow">
-				{{ walletAddress }}
-			</span>
+			<img :src="avatar" alt="avatar" class="w-20 h-20 rounded-full mr-3" />
+			<div>
+								<div class="text-overflow">
+									{{ formatAddress(address) }}
+								</div>
+								<div><span class="profit text-2xl">$+316.5k</span></div>
+							</div>
 		</div>
 
 		<div class="relative" >
@@ -44,9 +47,14 @@
 import { ref } from 'vue'
 
 import avatar from '/avatar.jpg'
+import { formatAddress } from '~/utils';
 
 defineProps({
 	role: String,
+	address: {
+		type:String,
+		default:''
+	}
 })
 
 // 声明一个 ref 变量来保存钱包地址和下拉框的显示状态
